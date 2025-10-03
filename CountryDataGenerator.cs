@@ -55,7 +55,7 @@ namespace Sweeft
                                        $"Population: {population}";
 
                         File.WriteAllText(fileName, content);
-                        Console.WriteLine($"✓ created: {name}.txt");
+                        Console.WriteLine($"created: {name}.txt");
                     }
                 }
             }
@@ -70,7 +70,7 @@ namespace Sweeft
             {
                 return value.ToString();
             }
-            return "N/A";
+            return "not available";
         }
 
         private static string GetLatLng(JsonElement country)
@@ -85,7 +85,7 @@ namespace Sweeft
                 }
                 return string.Join(", ", list);
             }
-            return "N/A";
+            return "not available";
         }
 
         private static string CleanFileName(string name)
@@ -97,4 +97,5 @@ namespace Sweeft
             return name;
         }
     }
+
 }
